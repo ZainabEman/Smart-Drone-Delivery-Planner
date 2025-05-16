@@ -22,7 +22,7 @@ The application provides an intuitive graphical user interface that allows logis
 - **Language**: Python 3.x
 - **GUI Framework**: Tkinter (Python standard library)
 - **Data Structures**: Custom implementations for city maps (weighted graphs), packages, and drones
-- **Algorithms**: 
+- **Algorithms**:
   - Dijkstra's algorithm for shortest path finding
   - Modified Knapsack algorithm for package selection
   - Route planning with optimization for multiple destinations
@@ -32,11 +32,13 @@ The application provides an intuitive graphical user interface that allows logis
 ## System Requirements
 
 ### Software Requirements
+
 - Python 3.6 or higher
 - Operating System: Windows, macOS, or Linux
 - Visual Studio Code (recommended IDE)
 
 ### Hardware Requirements
+
 - Processor: 1.6 GHz or faster
 - RAM: 2 GB or more
 - Disk Space: 50 MB for application and data
@@ -75,19 +77,22 @@ smart_drone_delivery_planner/
 ### Installation
 
 1. **Clone or download the repository**
-   ```
-   git clone https://github.com/yourusername/smart-drone-delivery-planner.git
-   ```
-   Or download and extract the ZIP file provided.
 
+   ```
+   git clone https://github.com/ZainabEman/Smart-Drone-Delivery-Planner.git
+   ```
+
+   Or download and extract the ZIP file provided.
 2. **Verify Python installation**
    Ensure Python 3.6+ is installed on your system:
+
    ```
    python --version
    ```
-   If not installed, download from [python.org](https://www.python.org/downloads/).
 
+   If not installed, download from [python.org](https://www.python.org/downloads/).
 3. **Open the project in VSCode**
+
    - Launch Visual Studio Code
    - Go to File > Open Folder
    - Navigate to the extracted project directory
@@ -96,13 +101,13 @@ smart_drone_delivery_planner/
 ### Running the Application
 
 1. **Open the terminal in VSCode** (Terminal > New Terminal)
-
 2. **Run the main script**
+
    ```
    python main.py
    ```
-   
 3. **Alternative methods**:
+
    - Right-click on `main.py` in the Explorer panel and select "Run Python File in Terminal"
    - Use the Run button in VSCode when `main.py` is open in the editor
 
@@ -111,6 +116,7 @@ smart_drone_delivery_planner/
 ### Main Interface
 
 The application is organized into three main tabs:
+
 1. **Input Data**: For entering city map, package, and drone information
 2. **Delivery Plans**: For viewing the generated delivery plans and trip details
 3. **Map Visualization**: For visualizing the city map and delivery routes
@@ -120,22 +126,26 @@ The application is organized into three main tabs:
 #### 1. Input Data Tab
 
 **Adding Cities**:
+
 - Enter a city name in the "City Name" field
 - Check the "Warehouse" box if this city contains the central warehouse
 - Click "Add City"
 - Note: One city must be designated as the warehouse
 
 **Adding Routes**:
+
 - Select the "From City" and "To City" from the dropdown menus
 - Enter the distance between the cities
 - Click "Add Route"
 - Note: Routes are bidirectional by default
 
 **Adding Packages**:
+
 - Enter the package ID, weight, value, and select a destination city
 - Click "Add Package"
 
 **Adding Drones**:
+
 - Enter the drone ID, maximum weight capacity, and maximum flight distance
 - Click "Add Drone"
 
@@ -166,13 +176,16 @@ The application is organized into three main tabs:
 #### 5. Additional Features
 
 **Save/Load Data**:
+
 - Click "Save Data" to save the current city map, packages, and drones to a JSON file
 - Click "Load Data" to load previously saved data
 
 **Sample Data**:
+
 - Click "Load Sample Data" to populate the application with example data for testing
 
 **Dynamic Updates**:
+
 - To simulate a route closure, select a route from the routes list and delete it
 - Run the planning algorithm again to generate new routes avoiding the closed path
 
@@ -181,22 +194,26 @@ The application is organized into three main tabs:
 ### Scenario 1: Simple Delivery Network
 
 **Setup**:
+
 - Create a small network with 3-4 cities including a warehouse
 - Add 5-6 packages of varying weights and values
 - Configure a drone with moderate capacity
 
 **Expected Results**:
+
 - The system should generate a simple, efficient delivery route
 - All packages should be deliverable in one or two trips
 
 ### Scenario 2: Complex Network with Constraints
 
 **Setup**:
+
 - Create a larger network with 6-8 cities
 - Add 10-15 packages distributed across different destinations
 - Configure multiple drones with different capacities and range limitations
 
 **Expected Results**:
+
 - The system should prioritize high-value packages within constraints
 - Multiple trips may be required to deliver all packages
 - Different drones may be assigned different routes based on their capabilities
@@ -204,11 +221,13 @@ The application is organized into three main tabs:
 ### Scenario 3: Edge Cases and Limitations
 
 **Setup**:
+
 - Include some very heavy packages that approach drone capacity limits
 - Create some distant cities that test the range limits of drones
 - Remove some routes to create "islands" or longer paths
 
 **Expected Results**:
+
 - The system should identify packages that cannot be delivered
 - Routes should be optimized to handle distance constraints
 - The planner should find alternative paths when direct routes are unavailable
