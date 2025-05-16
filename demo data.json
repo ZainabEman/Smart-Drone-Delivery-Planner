@@ -1,0 +1,158 @@
+{
+  "cities": [
+    {
+      "name": "Warehouse",
+      "is_warehouse": true
+    },
+    {
+      "name": "Downtown",
+      "is_warehouse": false
+    },
+    {
+      "name": "Suburb",
+      "is_warehouse": false
+    },
+    {
+      "name": "Industrial",
+      "is_warehouse": false
+    },
+    {
+      "name": "Airport",
+      "is_warehouse": false
+    },
+    {
+      "name": "Mall",
+      "is_warehouse": false
+    },
+    {
+      "name": "University",
+      "is_warehouse": false
+    }
+  ],
+  "routes": [
+    {
+      "from_city": "Warehouse",
+      "to_city": "Downtown",
+      "distance": 12.5
+    },
+    {
+      "from_city": "Warehouse",
+      "to_city": "Suburb",
+      "distance": 15.0
+    },
+    {
+      "from_city": "Warehouse",
+      "to_city": "Industrial",
+      "distance": 8.0
+    },
+    {
+      "from_city": "Downtown",
+      "to_city": "Mall",
+      "distance": 5.0
+    },
+    {
+      "from_city": "Downtown",
+      "to_city": "University",
+      "distance": 7.5
+    },
+    {
+      "from_city": "Suburb",
+      "to_city": "Mall",
+      "distance": 10.0
+    },
+    {
+      "from_city": "Industrial",
+      "to_city": "Airport",
+      "distance": 6.0
+    },
+    {
+      "from_city": "Airport",
+      "to_city": "University",
+      "distance": 12.0
+    },
+    {
+      "from_city": "Mall",
+      "to_city": "University",
+      "distance": 4.5
+    }
+  ],
+  "packages": [
+    {
+      "id": 1,
+      "weight": 2.5,
+      "value": 120,
+      "destination": "Downtown"
+    },
+    {
+      "id": 2,
+      "weight": 1.8,
+      "value": 90,
+      "destination": "Downtown"
+    },
+    {
+      "id": 3,
+      "weight": 3.2,
+      "value": 150,
+      "destination": "Suburb"
+    },
+    {
+      "id": 4,
+      "weight": 1.5,
+      "value": 75,
+      "destination": "Mall"
+    },
+    {
+      "id": 5,
+      "weight": 4.0,
+      "value": 200,
+      "destination": "Industrial"
+    },
+    {
+      "id": 6,
+      "weight": 2.0,
+      "value": 100,
+      "destination": "Airport"
+    },
+    {
+      "id": 7,
+      "weight": 3.5,
+      "value": 180,
+      "destination": "University"
+    },
+    {
+      "id": 8,
+      "weight": 1.2,
+      "value": 60,
+      "destination": "Mall"
+    },
+    {
+      "id": 9,
+      "weight": 2.8,
+      "value": 140,
+      "destination": "University"
+    },
+    {
+      "id": 10,
+      "weight": 3.0,
+      "value": 160,
+      "destination": "Suburb"
+    }
+  ],
+  "drones": [
+    {
+      "id": 1,
+      "max_weight": 5.0,
+      "max_distance": 40.0
+    },
+    {
+      "id": 2,
+      "max_weight": 8.0,
+      "max_distance": 60.0
+    },
+    {
+      "id": 3,
+      "max_weight": 3.0,
+      "max_distance": 30.0
+    }
+  ]
+}
